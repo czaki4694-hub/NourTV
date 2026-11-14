@@ -1,29 +1,47 @@
-name: Build NourTV APK
-on:
-  workflow_dispatch:
-permissions:
-  contents: read
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: '17'
-      - uses: android-actions/setup-android@v3
-        with:
-          packages: platform-tools
-          accept-android-sdk-licenses: true
-      - uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.9'
-      - name: Build APK
-        run: gradle -p NourTV :app:assembleDebug
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: NourTV-APK
-          path: NourTV/app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
+Skip to content
+czaki4694-hub
+NourTV
+Repository navigation
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security and quality
+Insights
+Settings
+.github/workflows/build-apk.yml
+Update build-apk.yml #5
+All jobs
+Run details
+Triggered via push now
+@czaki4694-hubczaki4694-hub
+pushed
+ 4515e96
+main
+Status
+Failure
+Total duration
+–
+Artifacts
+–
+This workflow graph cannot be shown
+A graph will be generated the next time this workflow is run.
+
+Annotations
+1 error
+Invalid workflow file: .github/workflows/build-apk.yml#L24
+You have an error in your yaml syntax on line 24
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
